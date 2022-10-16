@@ -6,7 +6,7 @@ p_load(tidymodels)
 
 
 
-raw_dataframe = fread('C:\\Users\\pedro_jw08iyg\\OneDrive\\Área de Trabalho\\DSA\\Projetos\\BigDataRealTimeAnalyticscomPythoneSpark\\Projeto4\\projeto4_telecom_treino.csv')
+raw_dataframe = fread('data\\projeto4_telecom_treino.csv')
 raw_dataframe[,churn:=factor(churn, levels = c("yes",'no'))]
 
 predictive_variables = c('international_plan','voice_mail_plan','number_vmail_messages',
@@ -185,7 +185,7 @@ cleaned_dataframe_training[,total_intl_charge:=NULL]
 # 2) DATA RESAMPLING ----
 
 
-raw_dataframe_test = fread('C:\\Users\\pedro_jw08iyg\\OneDrive\\Área de Trabalho\\DSA\\Projetos\\BigDataRealTimeAnalyticscomPythoneSpark\\Projeto4\\projeto4_telecom_teste.csv')
+raw_dataframe_test = fread('data\\projeto4_telecom_teste.csv')
 
 raw_dataframe_test = raw_dataframe_test[,.SD,.SDcols = c('churn',predictive_variables)]
 

@@ -26,10 +26,10 @@ from imblearn.over_sampling import SMOTE
 
 
 #1) loading data
-raw_dataframe_train = pd.read_csv('C:\\Users\\pedro_jw08iyg\\OneDrive\\Área de Trabalho\\DSA\\Projetos\\BigDataRealTimeAnalyticscomPythoneSpark\\Projeto4\\projeto4_telecom_treino.csv')
+raw_dataframe_train = pd.read_csv('data\\projeto4_telecom_treino.csv')
 raw_dataframe_train['source']='train'
 
-raw_dataframe_test = pd.read_csv('C:\\Users\\pedro_jw08iyg\\OneDrive\\Área de Trabalho\\DSA\\Projetos\\BigDataRealTimeAnalyticscomPythoneSpark\\Projeto4\\projeto4_telecom_teste.csv')
+raw_dataframe_test = pd.read_csv('data\\projeto4_telecom_teste.csv')
 raw_dataframe_test['source']='test'
 
 #checking columns names
